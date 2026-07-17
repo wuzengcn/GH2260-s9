@@ -1,0 +1,215 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap');
+
+// fonts
+// $font-family-monospace: "Courier New", Courier, monospace !default;
+$font-family-monospace: "Noto Sans", sans-serif !default; 
+// $font-family-monospace: 'HelveticaNeue-light', Helvetica, Arial, sans-serif !default;
+
+
+// colors
+$body-bg: #faf7fb !default;
+$body-color: #000 !default;
+$link-color: #783cb4 !default;
+$selection-bg: #26351c !default;
+$accent-color: #862633 !default;
+$callout-bg-color: #f2f1f5; 
+
+$callout-color-tip: #783cb4;
+$callout-color-note: #783cb4;
+$callout-color: #783cb4;
+
+// headings
+// $presentation-heading-font: "Courier New", Courier, monospace !default;
+$presentation-heading-font: "Helvetica Neue", sans-serif !default;
+$presentation-heading-font-weight: 400 !default;
+$presentation-heading-color: #763db3 !default;
+$presentation-font-size-root: 25px !default;
+$presentation-font-family: "Helvetica Neue", sans-serif !default;
+$presentation-h1-font-size: 2.5em !default;
+$presentation-h2-font-size: 1.8em !default;
+$presentation-h3-font-size: 1.0em !default;
+
+h2 {
+  border-bottom: 4px solid #763db3; /* Thickness, style, and color */
+  padding-bottom: 12px;              /* Space between text and line */
+  margin-bottom: 25px;              /* Space below the line */
+}
+
+
+// Fonts for list 
+
+$level1-font: "Helvetica Neue", serif;
+$level1-size: 1.0em;
+$level1-color: #0c0103;
+
+$level2-font: "Helvetica Neue", serif;
+$level2-size: 0.95em;
+$level2-color: #180557;
+
+$level3-font: "Helvetica Neue", serif;
+$level3-size: 0.85em;
+$level3-color: #0c0103;
+
+/*-- scss:rules --*/
+
+// Self-defined color
+
+.reveal a {
+  line-height: 0.9em;
+}
+
+.red {
+  color: $accent-color;
+}
+
+.green {
+  color: $link-color;
+}
+
+.purple {
+  color: #520860;
+}
+
+.themec {
+  color: $presentation-heading-color
+}
+
+.blue {
+  color: #003DA5;
+}
+
+.orange {
+  color: #FF6F00;
+}
+
+.yellow {
+  color: #F8E08E;
+}
+
+.huge {
+   font-size: 2.0 em !important;
+}
+
+.large {
+   font-size: 1.5 em !important;
+}
+
+.small {
+  font-size: 0.9 em
+}
+
+.tiny {
+  font-size: 0.5 em
+}
+
+// title-slide, title-left
+
+.reveal .slides section.title-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* vertical centering */
+  align-items: center;        /* horizontal centering */
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  gap: 0.75rem;
+  overflow: auto;             /* avoids layout breaks on small screens */
+}
+
+.reveal .slides section.title-left h2 {
+  max-width: 50%;
+}
+
+.reveal {
+  font-family: $presentation-font-family;
+}
+
+.reveal .slide .callout .callout-body p {
+ font-size: 1.2em; 
+ }
+
+ // List 
+
+ // Level 1 bullets (top-level <li> inside a top-level <ul>)
+ul li {
+  font-family: $level1-font;
+  font-size: $level1-size;
+  color: $level1-color;
+}
+
+// Level 2 bullets (nested one level deep)
+ul li ul li {
+  font-family: $level2-font;
+  font-size: $level2-size;
+  color: $level2-color;
+}
+
+// Level 3 bullets (nested two levels deep)
+ul li ul li ul li {
+  font-family: $level3-font;
+  font-size: $level3-size;
+  color: $level3-color;
+}
+
+// Optional: also style the bullet marker itself (::marker)
+ul li::marker {
+  color: $level1-color;
+}
+ul li ul li::marker {
+  color: $level2-color;
+}
+ul li ul li ul li::marker {
+  color: $level3-color;
+}
+
+// callout and block 
+
+.reveal .callout-body {
+  background-color: $callout-bg-color !important;
+}
+
+.block {
+  margin: 1em 0;
+  border: 2px solid $presentation-heading-color;
+  border-left: 10px solid $callout-color; 
+  border-radius: 10px;
+}
+
+.block-header {
+  margin-left: 0em;
+  padding-left: 10px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: black;
+  background-color: $body-bg;
+  border-top-right-radius: 10px;
+  border-bottom: 1px dotted $presentation-heading-color;
+  font-size: 1em;
+  font-weight: bold;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+}
+
+.block-body {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: black;
+  background-color: $callout-bg-color;
+  border-bottom-right-radius: 10px;
+}
+
+.quote {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: black;
+  background-color: $callout-bg-color;
+  border-bottom-right-radius: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  justify-content: center;    /* vertical centering */
+  align-items: center;        /* horizontal centering */
+  text-align: center;
+}

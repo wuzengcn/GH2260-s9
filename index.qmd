@@ -1,0 +1,451 @@
+---
+format:
+  revealjs:
+    theme: styles.scss
+    transition: fade
+    slide-number: true
+    wide: true
+    chalkboard: true
+    margin: 0.1
+    footer: "Introduction to Health Economics | Fall 2026 | Session 9"
+    controls: true
+---
+
+::: {.title-slide}
+
+# The market for health insurance
+
+<br>
+
+Wu Zeng, MD, PHD
+
+<br>
+
+Associate Professor
+
+Department of Global Health
+
+Georgetown University
+
+`wz192@georgetown.edu`
+
+<br>
+
+[Claimer]{.themec}: I declares no conflict of interest
+
+:::
+
+---
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, 
+  comment = NA, dpi = 300, fig.align = "center", out.width = "80%", cache = FALSE)
+library(tidyverse)
+library(DiagrammeR)
+library(widgetframe)
+library(readxl)
+library(kableExtra)
+```
+
+## Outline
+
+
+
+
+---
+
+## Debate on US health care system
+
+<center> 
+
+<iframe width="879" height="495" src="https://www.youtube.com/embed/jmOPWRyblMU" title="Serious Debate Begins on US Health Care System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</center>
+
+---
+
+## Debate on health care system 
+
+<center> 
+
+<iframe width="880" height="495" src="https://www.youtube.com/embed/PYWrUbc9F8U" title="Is Health Care a Right? || Debate Clip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</center>
+
+---
+
+## Why is health insurance so important? or why do people purchase health insurance
+
+<br> <br> <br> 
+
+<center> 
+
+### [Poll](https://www.mentimeter.com/app/presentation/al5ox3sz4sx7cbjwzc94miykv3a6gqqs/edit?question=q5bgjkzo9ybu)
+
+</center>
+
+--- 
+
+## Theory of risk and insurance 
+
+:::: columns
+::: {.column width="50%"}
+
+### Condition of perfectly competitive market
+
+- Many buyers and sellers
+
+- A standardized product
+
+- Mobile resources (free enter and exit the market)
+
+- Perfect information
+:::
+::: {.column width="50%"}
+
+### Medical care differs in significant ways
+
+- [Unpredictability]{.themec}
+
+- Asymmetric information: 
+
+  - A market situation where all participants do not have access to the
+same level of information
+
+- [Trust]{.themec}
+
+  - Principal-agent problem (also a information asymmetric problem)
+
+- Barriers to entry
+
+- [Payment practices]{.themec}: Health insurance 
+  
+  - Moral hazard: the over use of health service due to health insurance
+
+:::
+::::
+
+---
+
+## Relationship between income and utility under certainty 
+
+<center>
+
+<img src="/pic/S9-F1.png" width="70%">
+
+</center>
+
+---
+
+## How do we evaluate uncertainty (expected value)
+
+### Example 1: 
+
+> Currently, Elizabeth has $50,000 in her bank. it is estimated that Elizabeth has 4% of probability of incurring illness, which would cost her $50,000, what is Elizabeth expected income? 
+
+$$E = R_1*P_1+R_2*P_2+R_3*P_3+ ...$$
+
+$$E=R_1*P_1+R_2*P_2 = (50,000-50,000)*4\%+50,000*96\% = 48,000$$
+
+### Example 2: 
+
+> If the utility with $0 of income is 0, while the utility with $50,000 of income is 100, what is Elizabeth's expected utility?
+
+$$E=R_1*P_1+R_2*P_2 = 0*4\%+100*96\% = 96$$
+
+---
+
+## Relationship between income and utility under uncertainty
+
+<center>
+
+<img src="/pic/S9-F2.png" width="70%">
+
+</center>
+
+---
+
+## Put them together 
+
+<center>
+
+<img src="/pic/S9-F3.png" width="70%">
+
+</center>
+
+---
+
+## How much are individuals willing to pay for health insurance
+
+:::: columns
+
+::: {.column width="50%"}
+
+- Assumptions
+  - Individuals make rational decisions
+  - Individuals are risk averse, represented by diminishing turn of income or assets (Graph on the left)
+- Concept (under uncertainty, no insurance)
+  - Expected value under uncertainty  
+      - $E = P_1*R_1+P_2*R_2+...+P_n*R_n$ 
+  - Expected utility 
+      - $U_e = 0*0.04+100*0.96=96$
+  - Expected income
+      - $I_e = 0*0.04+50,000*0.96=48,000$
+:::
+
+::: {.column width="50%"}
+
+<center>
+
+<img src="/pic/S9-F4.png" width="100%">
+
+</center>
+
+:::
+
+::::
+
+---
+
+## How much health insurance company can charge (premium)
+
+:::: columns
+::: {.column width="50%"}
+
+<center>
+
+<img src="/pic/S9-F5.png" width="100%">
+
+</center>
+
+:::
+:::{.column width="50%"}
+
+### Actuarially fair premium: 
+
+- An actuarially fair premium is an insurance premium that is equal to the expected payout from the insurance company. 
+
+- It's calculated by multiplying the probability of a claim by the amount of the claim
+
+In the previous example, the actuarially fair premium = 4% * 50,000 = 2,000
+
+:::
+::::
+
+---
+
+## What do we learn from the exercixe 
+
+- Insurance can be sold only in circumstances where the consumer is [risk averse]{.themec}.
+
+- If insurance companies charge more than the actuarially fair premium, people will have less expected wealth from insuring than from not insuring.
+
+- Even though people will have less wealth as a result of their purchases of insurance, the increased well-being comes from the [elimination of risk]{.themec}
+
+- The willingness to buy insurance is related to the [distance]{.themec} between the utility curve and the expected utility line.
+
+---
+
+## Factors associated with taking insurance 
+
+:::: columns
+::: {.column width="50%"}
+
+- Shape of utility-of-income curve
+
+- Magnitude of the loss
+
+- The probability of risk
+
+- The premium itself
+:::
+::: {.column width="50%"}
+
+<center>
+
+<img src="/pic/S9-F5.png" width="120%">
+
+</center>
+
+:::
+::::
+
+---
+
+## Health insruance and market failure 
+
+- Maral hazard
+
+    - Third party payment $\rightarrow$ overuse of health care $\rightarrow$ moral hazard
+
+- Adverse selection
+    - Information problem (Asymmetry information) $\rightarrow$ adverse selection
+
+---
+
+## Moral Hazard
+
+:::: columns
+::: {.column width="50%"}
+
+- Definition: Moral hazard occurs anytime there is an opportunity to gain from acting differently
+from the implied principles of a contract
+
+  - .themec[The contract changes consumer’s behaviors]
+
+- Because private actions are hidden from view, both parties have an opportunity to gain from unpredictable behavior
+
+- Having insurance:
+  - Increases the likelihood of purchasing medical services
+  - Induces higher spending in the event of illness
+::: 
+
+::: {.column width="50%"}
+
+### The effect of moral hazard on medical care demand
+
+<center> 
+
+<img src="/pic/S9-F6.png" width="130%">
+
+</center>
+
+:::
+:::: 
+
+---
+
+## Moral Hazard {visibility="hidden"}
+
+<center>
+
+<iframe width="850" height="495" src="https://www.youtube.com/embed/keOJX7JObvI" title="Health Care Economics:  Ankle MRI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</center>
+
+---
+
+## User fees and moral hazard
+
+:::: columns
+::: {.column width="50%"}
+
+ - User charges can be viewed as a means of reducing moral hazard
+
+  - Forms: co-payments, co-insurance, deductibles
+
+  - Reduces utilization of health care by patients
+
+- But there are problems:
+
+  - Disproportionately affects lower income groups
+
+  - Demand is reduced for effective treatments as well as trivial health care
+
+  - May not reduce consumption if doctors induce demand
+:::
+
+:::{.column width="50%"}
+
+
+<iframe width="450" height="300" src="https://www.youtube.com/embed/kAKQ6TYzc-I" title="Why user fees won&#39;t make our health system more affordable, featuring Dr. Raisa Deber" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+:::
+:::: 
+
+--- 
+
+## Adverse selection
+
+:::: columns
+::: {.column width="50%"}
+
+- Adverse selection arises because
+  - Individuals may have [better information]{.themec} of their risk status than does the insurance company
+  - Individuals with a low risk of requiring health care may find it difficult to obtain ”actuarially fair” insurance – premium equal to expected cost of future consumption
+  - Those with [lower risk]{.themec} will [not purchase insurance]{.themec} priced to cater for those with
+average risk, whereas higher risk individuals will, SO…
+
+:::
+:::{.column width="50%"}
+
+- … average risk level of those remaining will
+rise (as will premium) (continually)
+- Result: those at [low risk]{.themec} (and high risk with
+low income) [not insured]{.themec} (as premium rises)
+
+<center> 
+
+<img src = "/pic/S9-F7.png" width = "100%" />
+
+</center> 
+
+:::
+::::
+
+--- 
+
+## Insurers' response to adverse selection
+- Cream skimming: 
+    - [‘experience rating’]{.themec} (set a different premium for different risk groups)
+- Compulsory [public insurance]{.themec} 
+    - Stops low risk leaving market (forced cross-subsidisation of those at high risk by those at low risk)
+
+---
+
+## Optimal insurance plan 
+
+- Balances the benefits of greater risk sharing with the costs of moral hazard
+- Make people responsible for more of their own care
+- Requires higher deductibles and larger copays
+- Pools high risk people into pools with other high risk people, and charges premiums
+  to reflect that risk.
+
+---
+
+## State level insurance regulation
+
+- Guaranteed issue
+- Guaranteed renewability
+- Restrictions on exclusions of pre-existing conditions
+- Children < the age of 26 are covered under their parents’ plan
+
+---
+
+## The economics of mandates
+
+:::: columns
+::: {.column width="50%"}
+- Mandates are not free
+  - Mandates will have long term consequences on the ability of the health care system to
+    provide access to quality care at affordable prices
+  - In general, research indicates that mandates increase the costs of health care systems
+  - Many working poor remain uninsured because state mandates make private insurance
+    unaffordable for many
+:::
+::: {.column width="50%"}
+
+<center>
+
+<img src = "/pic/S9-F8.png" width = "100%" />
+
+</center>
+
+:::
+::::
+
+---
+
+## Relationship between insurance & Health
+
+- Two parts to the connection:
+    - How does lack of insurance affect access to medical care?
+    - Does poor access result in poor health outcomes?
+- Significant differences of opinion re whether lack of insurance leads to poor health
+- Except for those who are poor and sick, there seems to be no relationship between
+health status and insurance status
+
+---
+
+## Questions and comments {.center}
+
